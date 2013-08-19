@@ -1,0 +1,31 @@
+[user]
+	name = Rafael Canovas
+	email = rafaelcanovas@me.com
+
+[github]
+	user = mstrcnvs
+
+[alias]
+	br = branch
+	c = commit -m
+	ca = commit -am
+	df = diff --color --color-words --abbrev
+	le = log --oneline --decorate
+	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+	s = status -sb
+
+[push]
+	default = current
+
+[log]
+	abbrevCommit = true
+
+[color]
+	ui = auto
+
+[credential]
+	helper = store
+
+[url "git://github.com/"]
+	insteadOf = "github:"
