@@ -9,6 +9,7 @@
 	br = branch
 	c = commit -m
 	ca = commit -am
+	cal = !git add -A; git commit -m
 	df = diff --color --color-words --abbrev
 	le = log --oneline --decorate
 	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
@@ -24,8 +25,8 @@
 [color]
 	ui = auto
 
-[credential]
-	helper = store
-
 [url "git://github.com/"]
 	insteadOf = "github:"
+
+[merge]
+	conflictstyle = diff3
