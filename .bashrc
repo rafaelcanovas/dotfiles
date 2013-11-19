@@ -62,6 +62,37 @@ function pngoutdir() {
 	for i in *.png; do pngout $i; done;
 }
 
+# Automatically activate virtualenvs
+# http://toranbillups.com/blog/archive/2012/4/22/Automatically-activate-your-virtualenv/
+workon_virtualenv() {
+	if [ -e $PWD/venv ]; then
+		source $PWD/venv/bin/activate
+	fi
+}
+
+virtualenv_cd() {
+	cd "$@" && workon_virtualenv
+}
+
+alias cd="virtualenv_cd"
+
+# Quickly navigate your filesystem from the command-line
+# http://jeroenjanssens.com/2013/08/16/quickly-navigate-your-filesystem-from-the-command-line.html
+export MARKPATH=$HOME/.marks
+
+function jump {
+    cd -P "$MARKPATH/$1" 2>/dev/null || echo "No such mark: $1"
+}
+function mark {
+    mkdir -p "$MARKPATH"; ln -s "$(pwd)" "$MARKPATH/$1"
+}
+function unmark {
+    rm -i "$MARKPATH/$1"
+}
+function marks {
+    ls -l "$MARKPATH" | sed 's/  / /g' | cut -d' ' -f9- | sed 's/ -/\t-/g' && echo
+}
+
 
 #######################
 # Git Auto Completion #
@@ -79,5 +110,3 @@ fi
 # A full-featured & carefully designed adaptive prompt for Bash & Zsh
 # https://github.com/nojhan/liquidprompt
 . ~/.liquidprompt/liquidprompt
-
-
