@@ -1,6 +1,7 @@
 shopt -s nocaseglob histappend cmdhist checkwinsize
 export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
 
+
 ###########
 # Aliases #
 ###########
@@ -14,9 +15,6 @@ alias whois="whois -h whois-servers.net"
 
 # Simple HTTP server
 alias server="python -m SimpleHTTPServer"
-
-# Sublime Text
-alias subl="/opt/sublime_text/sublime_text"
 
 
 #############
@@ -59,7 +57,10 @@ function gi() {
 
 # Run pngout through the entire dir
 function pngoutdir() {
-	for i in *.png; do pngout $i; done;
+	for i in *.png; do
+		[[ -f "$i" ]] || continue
+		pngout $i
+	done
 }
 
 # Automatically activate virtualenvs
