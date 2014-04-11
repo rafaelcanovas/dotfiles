@@ -1,7 +1,6 @@
 shopt -s nocaseglob histappend cmdhist checkwinsize
 export HISTCONTROL=$HISTCONTROL${HISTCONTROL+,}ignoredups
 
-
 ###########
 # Aliases #
 ###########
@@ -15,6 +14,9 @@ alias whois="whois -h whois-servers.net"
 
 # Simple HTTP server
 alias server="python -m SimpleHTTPServer"
+
+# Sublime Text
+alias subl="/opt/sublime_text/sublime_text"
 
 
 #############
