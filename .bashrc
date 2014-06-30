@@ -65,20 +65,6 @@ function pngoutdir() {
 	done
 }
 
-# Automatically activate virtualenvs
-# http://toranbillups.com/blog/archive/2012/4/22/Automatically-activate-your-virtualenv/
-workon_virtualenv() {
-	if [ -e $PWD/venv ]; then
-		source $PWD/venv/bin/activate
-	fi
-}
-
-virtualenv_cd() {
-	cd "$@" && workon_virtualenv
-}
-
-alias cd="virtualenv_cd"
-
 # Quickly navigate your filesystem from the command-line
 # http://jeroenjanssens.com/2013/08/16/quickly-navigate-your-filesystem-from-the-command-line.html
 export MARKPATH=$HOME/.marks
@@ -95,6 +81,16 @@ function unmark {
 function marks {
     ls -l "$MARKPATH" | sed 's/  / /g' | cut -d' ' -f9- | sed 's/ -/\t-/g' && echo
 }
+
+
+############
+# Autovenv #
+############
+
+# Automatic activation and deactivation of virtualenvs /*done right*/.
+# https://github.com/skyenhasus/autovenv
+
+. ~/.autovenv/autovenv.sh
 
 
 #######################
