@@ -54,7 +54,7 @@ function calc () {
 
 # Generate useful .gitignore files for your project
 function gi() {
-	curl http://www.gitignore.io/api/$@;
+	curl https://www.gitignore.io/api/$@;
 }
 
 # Run pngout through the entire dir
