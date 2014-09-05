@@ -109,3 +109,12 @@ fi
 # A full-featured & carefully designed adaptive prompt for Bash & Zsh
 # https://github.com/nojhan/liquidprompt
 . ~/.liquidprompt/liquidprompt
+
+
+###############
+# Android SDK #
+###############
+
+export ANDROID_HOME="$HOME/.android/adt/sdk/tools"
+export ANDROID_PLATFORM_TOOLS="$HOME/.android/adt/sdk/platform-tools"
+export PATH="$ANDROID_HOME:$ANDROID_PLATFORM_TOOLS:$PATH"
