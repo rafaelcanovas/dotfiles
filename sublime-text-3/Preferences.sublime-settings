@@ -1,0 +1,40 @@
+{
+	"bold_folder_labels": true,
+	"caret_extra_width": 1,
+	"caret_style": "phase",
+	"color_scheme": "Packages/User/CiapreBlack (SL).tmTheme",
+	"create_window_at_startup": false,
+	"draw_minimap_border": true,
+	"ensure_newline_at_eof_on_save": true,
+	"file_exclude_patterns":
+	[
+		"*~",
+		"*.pyc"
+	],
+	"folder_exclude_patterns":
+	[
+		".*",
+		"__pycache__",
+		"node_modules"
+	],
+	"font_face": "Source Code Pro",
+	"font_options":
+	[
+		"subpixel_antialias"
+	],
+	"font_size": 10,
+	"highlight_line": true,
+	"highlight_modified_tabs": true,
+	"hot_exit": false,
+	"ignored_packages":
+	[
+		"Vintage"
+	],
+	"remember_open_files": false,
+	"show_encoding": true,
+	"tabs_medium": true,
+	"theme": "Afterglow-blue.sublime-theme",
+	"trim_trailing_white_space_on_save": true,
+	"wide_caret": true,
+	"word_wrap": false
+}
