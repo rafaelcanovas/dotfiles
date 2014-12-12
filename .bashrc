@@ -83,6 +83,16 @@ function marks {
 }
 
 
+###########
+# Autoenv #
+###########
+
+# Directory-based environments.
+# https://github.com/kennethreitz/autoenv
+
+. ~/.autoenv/activate.sh
+
+
 ############
 # Autovenv #
 ############
@@ -115,6 +125,6 @@ fi
 # Android SDK #
 ###############
 
-export ANDROID_HOME="$HOME/.android/adt/sdk/tools"
+export ANDROID_HOME="$HOME/.android/adt/sdk/"
 export ANDROID_PLATFORM_TOOLS="$HOME/.android/adt/sdk/platform-tools"
 export PATH="$ANDROID_HOME:$ANDROID_PLATFORM_TOOLS:$PATH"
