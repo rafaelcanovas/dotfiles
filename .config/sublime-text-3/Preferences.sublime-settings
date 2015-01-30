@@ -32,8 +32,10 @@
 	],
 	"remember_open_files": false,
 	"show_encoding": true,
+	"tab_size": 4,
 	"tabs_medium": true,
 	"theme": "Afterglow-blue.sublime-theme",
+	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"wide_caret": true,
 	"word_wrap": false
