@@ -6,16 +6,15 @@
 	user = mstrcnvs
 
 [alias]
-	br = branch
 	c = commit -m
 	ca = commit -am
-	cal = !git add -A; git commit -m
 	df = diff --color --color-words --abbrev
+	s = status -sb
+	undo-commit = reset --soft HEAD~1
+	chp = !git checkout $1 && git pull && :
 	le = log --oneline --decorate
 	ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
 	ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
-	s = status -sb
-	undo-commit = reset --soft HEAD~1
 
 [push]
 	default = current
