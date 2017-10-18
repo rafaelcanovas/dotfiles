@@ -66,26 +66,6 @@ function pngoutdir() {
 }
 
 
-###########
-# Autoenv #
-###########
-
-# Directory-based environments.
-# https://github.com/kennethreitz/autoenv
-
-. ~/.autoenv/activate.sh
-
-
-############
-# Autovenv #
-############
-
-# Automatic activation and deactivation of virtualenvs /*done right*/.
-# https://github.com/skyenhasus/autovenv
-
-. ~/.autovenv/autovenv.sh
-
-
 #######################
 # Git Auto Completion #
 #######################
@@ -105,10 +85,31 @@ fi
 . ~/.liquidprompt/liquidprompt
 
 
-###############
-# Android SDK #
-###############
+#######################
+# Android Development #
+#######################
 
-export ANDROID_HOME="$HOME/.android/adt/sdk/"
-export ANDROID_PLATFORM_TOOLS="$HOME/.android/adt/sdk/platform-tools"
-export PATH="$ANDROID_HOME:$ANDROID_PLATFORM_TOOLS:$PATH"
+export ANDROID_HOME="$HOME/.android/sdk"
+export PATH="$PATH:$ANDROID_HOME/tools/:$ANDROID_HOME/platform-tools/"
+
+
+##########
+# direnv #
+##########
+
+_direnv_hook() {
+  eval "$(direnv export bash)";
+};
+if ! [[ "$PROMPT_COMMAND" =~ _direnv_hook ]]; then
+  PROMPT_COMMAND="_direnv_hook;$PROMPT_COMMAND";
+fi
+
+
+#####################
+# virtualenvwrapper #
+#####################
+
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/dev
+export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
+source /usr/local/bin/virtualenvwrapper_lazy.sh
