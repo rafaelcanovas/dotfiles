@@ -2,7 +2,7 @@
 	"bold_folder_labels": true,
 	"caret_extra_width": 1,
 	"caret_style": "phase",
-	"color_scheme": "Packages/User/CiapreBlack (SL).tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/CiapreBlack (SL).tmTheme",
 	"create_window_at_startup": false,
 	"draw_minimap_border": true,
 	"ensure_newline_at_eof_on_save": true,
@@ -14,8 +14,7 @@
 	"folder_exclude_patterns":
 	[
 		".*",
-		"__pycache__",
-		"node_modules"
+		"__pycache__"
 	],
 	"font_face": "Source Code Pro",
 	"font_options":
