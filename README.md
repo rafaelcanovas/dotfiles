@@ -1,7 +1,7 @@
 # Tools
 
-- zsh
-- VSCodium
+- [zsh](https://ohmyz.sh)
+- [VSCodium](https://vscodium.com)
 
 # Installing
 
