@@ -71,8 +71,10 @@ zi light z-shell/zsh-diff-so-fancy
 ###########
 
 alias globalip="dig -4 TXT +short o-o.myaddr.l.google.com @ns1.google.com | tr '\"' '\0'"
-
 alias localip="ifconfig en0 | grep 'inet[ ]' | awk '{print $2}'"
+
+alias caf="sudo pmset -b sleep 0; sudo pmset displaysleep 0; sudo pmset -b disablesleep 1; sudo systemsetup -setcomputersleep Never"
+alias decaf="sudo pmset -b sleep 5; sudo pmset displaysleep 5; sudo pmset -b disablesleep 0; sudo systemsetup -setcomputersleep 10"
 
 
 #############
@@ -120,3 +122,29 @@ export CPPFLAGS="-I/usr/local/opt/openssl/include"
 
 export KUBE_EDITOR="codium --wait"
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+
+
+######
+# go #
+######
+
+export GOPATH="${HOME}/.go"
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+
+
+################
+# Google Cloud #
+################
+
+source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc
+source /opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
+
+
+########
+# gems #
+########
+
+export GEM_HOME=$HOME/.gem
+export PATH=$GEM_HOME/bin:$PATH
