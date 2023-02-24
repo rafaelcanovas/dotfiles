@@ -50,7 +50,6 @@
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "workbench.settings.enableNaturalLanguageSearch": false,
-    "python.insidersChannel": "daily",
     "workbench.startupEditor": "none",
     "workbench.enableExperiments": false,
     "editor.accessibilitySupport": "off",
@@ -58,7 +57,6 @@
     "gitlens.codeLens.authors.enabled": false,
     "diffEditor.ignoreTrimWhitespace": false,
     "eslint.format.enable": true,
-    "eslint.alwaysShowStatus": true,
     "git.pruneOnFetch": true,
     "javascript.updateImportsOnFileMove.enabled": "always",
     "editor.stickyScroll.enabled": true,
@@ -67,5 +65,21 @@
     "gitlens.defaultDateLocale": null,
     "workbench.colorTheme": "Atom One Dark",
     "workbench.productIconTheme": "material-product-icons",
-    "conventionalCommits.gitmoji": false
+    "conventionalCommits.gitmoji": false,
+    "git.openRepositoryInParentFolders": "never",
+    "files.associations": {
+        "*.arb": "json"
+    },
+    "[dart]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.rulers": [
+            80
+        ],
+        "editor.selectionHighlight": false,
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.suggestSelection": "first",
+        "editor.tabCompletion": "onlySnippets",
+        "editor.wordBasedSuggestions": false
+    }
 }
