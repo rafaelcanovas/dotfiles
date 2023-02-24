@@ -33,11 +33,9 @@ zinit light sindresorhus/pure
 # plugins with a single command. For more information see:
 # https://zdharma-continuum.github.io/zinit/wiki/For-Syntax/
 zinit for \
-    light-mode  zsh-users/zsh-autosuggestions \
-    light-mode  zdharma-continuum/fast-syntax-highlighting \
-                zdharma-continuum/history-search-multi-word \
-    light-mode pick"async.zsh" src"pure.zsh" \
-                sindresorhus/pure
+    light-mode zsh-users/zsh-autosuggestions \
+    light-mode zdharma-continuum/fast-syntax-highlighting \
+               zdharma-continuum/history-search-multi-word
 
 # Binary release in archive, from GitHub-releases page.
 # After automatic unpacking it provides program "fzf".
@@ -66,28 +64,36 @@ zi ice as"program" pick"bin/git-dsf"
 zi light z-shell/zsh-diff-so-fancy
 
 
-###########
-# Aliases #
-###########
+#########################
+# Aliases and functions #
+#########################
 
 alias globalip="dig -4 TXT +short o-o.myaddr.l.google.com @ns1.google.com | tr '\"' '\0'"
 alias localip="ifconfig en0 | grep 'inet[ ]' | awk '{print $2}'"
 
-alias caf="sudo pmset -b sleep 0; sudo pmset displaysleep 0; sudo pmset -b disablesleep 1; sudo systemsetup -setcomputersleep Never"
-alias decaf="sudo pmset -b sleep 5; sudo pmset displaysleep 5; sudo pmset -b disablesleep 0; sudo systemsetup -setcomputersleep 10"
+# Enable MacOS clamshell mode without charger connected
+caf () {
+    sudo pmset -b sleep 0
+    sudo pmset displaysleep 0
+    sudo pmset -b disablesleep 1
+    sudo systemsetup -setcomputersleep Never
+}
 
-
-#############
-# Functions #
-#############
+# Disable MacOS clamshell mode without charger connected
+decaf () {
+    sudo pmset -b sleep 10
+    sudo pmset displaysleep 5
+    sudo pmset -b disablesleep 0
+    sudo systemsetup -setcomputersleep 10
+}
 
 # Copy with progress
-function cp_p () {
+cp_p () {
     rsync -WavP --human-readable --progress $1 $2
 }
 
 # Get gzipped size
-function gz() {
+gz() {
     echo "original size: $(cat "$1" | wc -c)B"
     echo "gzipped size: $(gzip -c "$1" | wc -c)B"
 }
