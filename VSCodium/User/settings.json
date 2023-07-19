@@ -15,7 +15,12 @@
     "conventionalCommits.promptBody": false,
     "conventionalCommits.promptFooter": false,
     "conventionalCommits.promptScopes": false,
+    "diffEditor.experimental.collapseUnchangedRegions": true,
+    "diffEditor.experimental.showEmptyDecorations": true,
+    "diffEditor.experimental.showMoves": true,
+    "diffEditor.experimental.useVersion2": true,
     "diffEditor.ignoreTrimWhitespace": false,
+    "diffEditor.renderSideBySide": true,
     "editor.accessibilitySupport": "off",
     "editor.cursorBlinking": "phase",
     "editor.cursorSmoothCaretAnimation": "on",
@@ -23,6 +28,7 @@
     "editor.fontLigatures": true,
     "editor.fontSize": 14,
     "editor.formatOnSave": true,
+    "editor.largeFileOptimizations": false,
     "editor.minimap.maxColumn": 200,
     "editor.minimap.renderCharacters": false,
     "editor.minimap.showSlider": "always",
@@ -38,8 +44,6 @@
         "info",
         "error"
     ],
-    "eslint.format.enable": true,
-    "eslint.packageManager": "yarn",
     "files.associations": {
         "*.arb": "json"
     },
@@ -51,16 +55,26 @@
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
     "git.autofetch": true,
+    "git.branchPrefix": "canovas/",
     "git.confirmSync": false,
     "git.openRepositoryInParentFolders": "never",
     "git.pruneOnFetch": true,
+    "github.branchProtection": true,
     "gitlens.codeLens.authors.enabled": false,
-    "gitlens.codeLens.enabled": false,
     "gitlens.codeLens.recentChange.enabled": false,
-    "gitlens.defaultDateLocale": null,
     "gitlens.statusBar.enabled": false,
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "python.defaultInterpreterPath": "python3",
+    "go.buildTags": "integration",
+    "go.coverageDecorator": {
+        "coveredGutterStyle": "verticalgreen",
+        "type": "gutter",
+        "uncoveredGutterStyle": "verticalred"
+    },
+    "go.coverOnSave": true,
+    "go.inlayHints.compositeLiteralFields": true,
+    "go.inlayHints.compositeLiteralTypes": true,
+    "go.inlayHints.constantValues": true,
+    "go.inlayHints.parameterNames": true,
+    "go.inlayHints.rangeVariableTypes": true,
     "python.formatting.provider": "black",
     "python.linting.flake8Args": [
         "--ignore=E501"
@@ -70,10 +84,14 @@
     "python.testing.pytestEnabled": true,
     "redhat.telemetry.enabled": false,
     "search.mode": "newEditor",
+    "svelte.enable-ts-plugin": true,
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
     "terminal.integrated.fontFamily": "Fira Code",
     "terminal.integrated.fontSize": 14,
+    "terraform.experimentalFeatures.prefillRequiredFields": true,
+    "terraform.experimentalFeatures.validateOnSave": true,
+    "terraform.languageServer.enable": true,
     "window.restoreWindows": "all",
     "workbench.colorTheme": "Atom One Dark",
     "workbench.enableExperiments": false,
@@ -81,5 +99,9 @@
     "workbench.list.smoothScrolling": true,
     "workbench.productIconTheme": "material-product-icons",
     "workbench.settings.enableNaturalLanguageSearch": false,
-    "workbench.startupEditor": "none"
+    "workbench.startupEditor": "none",
+    "codeium.enableConfig": {
+        "*": true,
+        "Log": true
+    }
 }
