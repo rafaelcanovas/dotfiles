@@ -109,9 +109,10 @@ pyclean () {
 # Android Development #
 #######################
 
-export ANDROID_HOME="$HOME/.android/sdk"
-export PATH="$PATH:$ANDROID_HOME/tools/:$ANDROID_HOME/platform-tools/"
-
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export PATH="$HOME/Library/Android/sdk/:$PATH"
+export PATH="$HOME/Library/Android/sdk/platform-tools:$PATH"
+export PATH="$HOME/Library/Android/sdk/cmdline-tools/latest/bin:$PATH"
 
 ###########
 # openssl #
@@ -154,3 +155,22 @@ export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
 export GEM_HOME=$HOME/.gem
 export PATH=$GEM_HOME/bin:$PATH
+
+
+########
+# dart #
+########
+
+export PATH="$PATH":"$HOME/.pub-cache/bin"
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /Users/rafaelcanovas/.dart-cli-completion/zsh-config.zsh ]] && . /Users/rafaelcanovas/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+
+
+##############
+# postgresql #
+##############
+
+export PATH="/opt/homebrew/opt/libpq/bin:$PATH"
