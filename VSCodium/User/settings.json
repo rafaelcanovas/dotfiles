@@ -9,7 +9,10 @@
         "editor.suggest.snippetsPreventQuickSuggestions": false,
         "editor.suggestSelection": "first",
         "editor.tabCompletion": "onlySnippets",
-        "editor.wordBasedSuggestions": false
+        "editor.wordBasedSuggestions": "off"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
     },
     "conventionalCommits.gitmoji": false,
     "conventionalCommits.promptBody": false,
@@ -17,6 +20,7 @@
     "diffEditor.experimental.showEmptyDecorations": true,
     "diffEditor.experimental.showMoves": true,
     "diffEditor.experimental.useVersion2": true,
+    "diffEditor.hideUnchangedRegions.enabled": true,
     "diffEditor.ignoreTrimWhitespace": false,
     "diffEditor.renderSideBySide": true,
     "editor.accessibilitySupport": "off",
@@ -61,16 +65,19 @@
     "gitlens.codeLens.authors.enabled": false,
     "gitlens.codeLens.recentChange.enabled": false,
     "gitlens.statusBar.enabled": false,
+    "go.buildTags": "integration",
     "go.coverageDecorator": {
         "coveredGutterStyle": "verticalgreen",
         "type": "gutter",
         "uncoveredGutterStyle": "verticalred"
     },
+    "go.coverOnSave": true,
     "go.inlayHints.compositeLiteralFields": true,
     "go.inlayHints.compositeLiteralTypes": true,
     "go.inlayHints.constantValues": true,
     "go.inlayHints.parameterNames": true,
     "go.inlayHints.rangeVariableTypes": true,
+    "go.toolsManagement.autoUpdate": true,
     "python.formatting.provider": "black",
     "python.linting.flake8Args": [
         "--ignore=E501"
@@ -85,14 +92,18 @@
     "python.testing.unittestEnabled": true,
     "redhat.telemetry.enabled": false,
     "search.mode": "newEditor",
+    "sqlfluff.dialect": "postgres",
     "svelte.enable-ts-plugin": true,
     "telemetry.enableCrashReporter": false,
     "telemetry.enableTelemetry": false,
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.enableMultiLinePasteWarning": false,
     "terminal.integrated.fontFamily": "Fira Code",
     "terminal.integrated.fontSize": 14,
     "terraform.experimentalFeatures.prefillRequiredFields": true,
     "terraform.experimentalFeatures.validateOnSave": true,
     "terraform.languageServer.enable": true,
+    "window.commandCenter": false,
     "window.restoreWindows": "all",
     "workbench.colorTheme": "Atom One Dark",
     "workbench.enableExperiments": false,
@@ -100,13 +111,5 @@
     "workbench.list.smoothScrolling": true,
     "workbench.productIconTheme": "material-product-icons",
     "workbench.settings.enableNaturalLanguageSearch": false,
-    "workbench.startupEditor": "none",
-    "terminal.external.osxExec": "iTerm.app",
-    "sqlfluff.dialect": "postgres",
-    "terminal.integrated.enableMultiLinePasteWarning": false,
-    "diffEditor.hideUnchangedRegions.enabled": true,
-    "window.commandCenter": false,
-    "go.toolsManagement.autoUpdate": true,
-    "go.coverOnSave": true,
-    "go.buildTags": "integration"
+    "workbench.startupEditor": "none"
 }
